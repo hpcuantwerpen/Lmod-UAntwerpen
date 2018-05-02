@@ -1,7 +1,7 @@
-Lmod for HPC-UGent
-==================
+Lmod for HPC-UAntwerpen 
+=======================
 
-This repo contains the spec for Lmod used at HPC-UGent. It's a fork
+This repo contains the spec for Lmod used at HPC-UAntwerpen. It's a fork
 from the Fedora upstream spec file. We use our own set of configure
 options and we don't allow environment-modules to coexist with Lmod.
 
@@ -12,12 +12,6 @@ Our configure options
 
 - `redirect=yes`:
   Output to stdout instead stderr
-
-- `autoSwap=no`, `disableNameAutoSwap=yes`:
-  We try to mimick the behaviour of environment-modules and don't
-  let Lmod to it's swapping magic when changing cluster modules.
-  We basically only want swapping when a module with the same name
-  and version exists.
 
 - `shortTime=86400`:
   Avoids that Lmod builds a user cache. The cache has a valid lifetime
@@ -37,19 +31,26 @@ Our configure options
   stating of all directories when the module path is extend after
   loading a cluster module
 
+- `siteName=HPC-UAntwerpen`:
+  Set the site name (not the name of the cluster). This is used with
+  the family function.
+
+
 Patches
 -------
 
 A (trivial) patch is applied to change the behaviour of 'module spider',
-to adhere to a policy specific to HPC-UGent.
+to adhere to a policy specific to HPC-UAntwerpen.
 
 One or more hidden 'cluster' modules may be available for testing purposes.
 
-These are not intended to be used for production however, and so 'module spider'
-should not include these hidden cluster modules in the output.
+These are not intended to be used for production however, and so
+'module spider' should not include these hidden cluster modules
+in the output.
 
-Recent versions of Lmod do show hidden modules in the output of 'module spider' by default,
-hence we patch our Lmod installation to behave otherwise.
+Recent versions of Lmod do show hidden modules in the output of
+'module spider' by default, hence we patch our Lmod installation
+to behave otherwise.
 
 SitePackage
 -----------

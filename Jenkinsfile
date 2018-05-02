@@ -11,7 +11,7 @@ node {
     sh "wget -q https://github.com/rpm-software-management/rpmlint/archive/rpmlint-${RPMLINT_VERSION}.tar.gz"
     sh "tar -xzf rpmlint-${RPMLINT_VERSION}.tar.gz"
     env.PATH = "${pwd()}/rpmlint-rpmlint-${RPMLINT_VERSION}:${env.PATH}"
-    sh "rpmlint Lmod-UGent.spec"
+    sh "rpmlint Lmod-UAntwerpen.spec"
 
     stage 'luacheck SitePackage'
     sh "mkdir luatree"

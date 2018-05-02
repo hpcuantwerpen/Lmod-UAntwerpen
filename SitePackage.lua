@@ -1,5 +1,7 @@
 --------------------------------------------------------------------------
--- The SitePackage customization for UGent-HPC
+-- The SitePackage customization for HPC-UAntwerpen
+-- Franky Backeljauw <franky.backeljauw@uantwerpen.be>
+-- The SitePackage customization for HPC-UGent
 -- Ward Poelmans <ward.poelmans@ugent.be>
 -- Kenneth Hoste <kenneth.hoste@ugent.be>
 --------------------------------------------------------------------------
@@ -178,7 +180,7 @@ end
 
 local function site_name_hook()
     -- set the SiteName
-    return "HPCUGENT"
+    return "HPC-UAntwerpen"
 end
 
 
