@@ -29,7 +29,7 @@ Our configure options
   Use the cache to load modules. If the module is not in the cache, it
   cannot be loaded until the cache is rebuild. This avoids the costly
   stating of all directories when the module path is extend after
-  loading a cluster module
+  loading a cluster module (currently not activated)
 
 - `siteName=HPC-UAntwerpen`:
   Set the site name (not the name of the cluster). This is used with
