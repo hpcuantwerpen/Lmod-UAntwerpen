@@ -1,7 +1,7 @@
 %global macrosdir %(d=%{_rpmconfigdir}/macros.d; [ -d $d ] || d=%{_sysconfdir}/rpm; echo $d)
 
 Name:           Lmod
-Version:        7.7.29
+Version:        7.7.37
 Release:        1.ua%{?dist}
 Summary:        Environmental Modules System in Lua
 
@@ -52,7 +52,7 @@ sed -i -e '/^#!/d' init/*.in
 
 
 %build
-%configure --prefix=%{_datadir} PS=/bin/ps --with-caseIndependentSorting=yes --with-redirect=yes --with-shortTime=86400 --with-pinVersions=yes --with-cachedLoads=yes --with-siteName='HPC-UAntwerpen'
+%configure --prefix=%{_datadir} PS=/bin/ps --with-caseIndependentSorting=yes --with-redirect=yes --with-shortTime=86400 --with-pinVersions=yes --with-siteName='HPC-UAntwerpen'
 make %{?_smp_mflags}
 
 
@@ -93,8 +93,8 @@ rm -rf %{buildroot}
 
 %changelog
 
-* Wed May 2 2018 Franky Backeljauw <franky.backeljauw@uantwerpen.be> - 7.7.29-1.ua
-- update to Lmod 7.7.26
+* Wed Jul 10 2018 Franky Backeljauw <franky.backeljauw@uantwerpen.be> - 7.7.37-1.ua
+- update to Lmod 7.7.37
 
 * Wed Apr 4 2018 Kenneth Hoste <kenneth.hoste@ugent.be> - 7.7.26-1.ug
 - update to Lmod 7.7.26 (clean error when cache file can not be read & more)

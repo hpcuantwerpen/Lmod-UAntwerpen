@@ -151,7 +151,7 @@ local function errwarnmsg_hook(kind, key, msg, t)
     end
 
     if kind == "lmoderror" or kind == "lmodwarning" then
-        msg = msg .. "\nIf you don't understand the warning or error, contact the helpdesk at hpc@ugent.be"
+        msg = msg .. "\nIf you don't understand the warning or error, contact the helpdesk at hpc@uuantwerpen.be"
     end
 
     dbg.fini()
@@ -169,7 +169,7 @@ local function msg_hook(mode, output)
     dbg.print{"Mode is ", mode, "\n"}
 
     if mode == "avail" then
-        output[#output+1] = "\nIf you need software that is not listed, request it at hpc@ugent.be\n"
+        output[#output+1] = "\nIf you need software that is not listed, request it at hpc@uantwerpen.be\n"
     end
 
     dbg.fini()
