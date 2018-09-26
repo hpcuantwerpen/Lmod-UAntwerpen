@@ -1,7 +1,7 @@
 %global macrosdir %(d=%{_rpmconfigdir}/macros.d; [ -d $d ] || d=%{_sysconfdir}/rpm; echo $d)
 
 Name:           Lmod
-Version:        7.7.37
+Version:        7.8.4
 Release:        1.ua%{?dist}
 Summary:        Environmental Modules System in Lua
 
@@ -92,6 +92,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+
+* Wed Sep 26 2018 Franky Backeljauw <franky.backeljauw@uantwerpen.be> - 7.8.4-1.ua
+- update to Lmod 7.8.4
 
 * Wed Jul 10 2018 Franky Backeljauw <franky.backeljauw@uantwerpen.be> - 7.7.37-1.ua
 - update to Lmod 7.7.37
