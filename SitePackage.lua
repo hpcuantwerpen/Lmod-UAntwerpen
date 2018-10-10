@@ -151,7 +151,7 @@ local function errwarnmsg_hook(kind, key, msg, t)
     end
 
     if kind == "lmoderror" or kind == "lmodwarning" then
-        msg = msg .. "\nIf you don't understand the warning or error, contact the helpdesk at hpc@uuantwerpen.be"
+        msg = msg .. "\nIf you don't understand the warning or error, contact the helpdesk at hpc@uantwerpen.be"
     end
 
     dbg.fini()
