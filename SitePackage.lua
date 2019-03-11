@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------
--- The SitePackage customization for HPC-UAntwerpen
+-- The SitePackage customization for CalcUA (HPC-UAntwerpen)
 -- Franky Backeljauw <franky.backeljauw@uantwerpen.be>
 -- The SitePackage customization for HPC-UGent
 -- Ward Poelmans <ward.poelmans@ugent.be>
@@ -180,7 +180,7 @@ end
 
 local function site_name_hook()
     -- set the SiteName
-    return "HPC-UAntwerpen"
+    return "CALCUA"
 end
 
 

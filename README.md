@@ -1,9 +1,10 @@
-Lmod for HPC-UAntwerpen 
-=======================
+Lmod for CalcUA (HPC-UAntwerpen) 
+================================
 
-This repo contains the spec for Lmod used at HPC-UAntwerpen. It's a fork
-from the Fedora upstream spec file. We use our own set of configure
-options and we don't allow environment-modules to coexist with Lmod.
+This repo contains the spec for Lmod used at CalcUA (HPC-UAntwerpen).
+It's a fork from the Fedora upstream spec file. We use our own set of
+configure options and we don't allow environment-modules to coexist
+with Lmod.
 
 Our configure options
 ---------------------
@@ -31,7 +32,7 @@ Our configure options
   stating of all directories when the module path is extend after
   loading a cluster module (currently not activated)
 
-- `siteName=HPC-UAntwerpen`:
+- `siteName=CalcUA`:
   Set the site name (not the name of the cluster). This is used with
   the family function.
 
@@ -40,7 +41,7 @@ Patches
 -------
 
 A (trivial) patch is applied to change the behaviour of 'module spider',
-to adhere to a policy specific to HPC-UAntwerpen.
+to adhere to a policy specific to CalcUA (HPC-UAntwerpen).
 
 One or more hidden 'cluster' modules may be available for testing purposes.
 

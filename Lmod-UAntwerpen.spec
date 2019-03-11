@@ -1,7 +1,7 @@
 %global macrosdir %(d=%{_rpmconfigdir}/macros.d; [ -d $d ] || d=%{_sysconfdir}/rpm; echo $d)
 
 Name:           Lmod
-Version:        7.8.4
+Version:        7.8.22
 Release:        1.ua%{?dist}
 Summary:        Environmental Modules System in Lua
 
@@ -46,13 +46,13 @@ where the library and header files can be found.
 sed -i -e 's,/usr/bin/env ,/usr/bin/,' src/*.tcl
 # Remove bundled lua-term
 rm -r pkgs tools/json.lua
-#sed -i -e 's, pkgs , ,' Makefile.in
+sed -i -e 's/^spiderCacheSupport: lfs/spiderCacheSupport: /' Makefile.in
 # Remove unneeded shbangs
 sed -i -e '/^#!/d' init/*.in
 
 
 %build
-%configure --prefix=%{_datadir} PS=/bin/ps --with-caseIndependentSorting=yes --with-redirect=yes --with-shortTime=86400 --with-pinVersions=yes --with-siteName='HPC-UAntwerpen'
+%configure --prefix=%{_datadir} PS=/bin/ps --with-caseIndependentSorting=yes --with-redirect=yes --with-shortTime=86400 --with-pinVersions=yes --with-siteName='CalcUA'
 make %{?_smp_mflags}
 
 
@@ -92,6 +92,10 @@ rm -rf %{buildroot}
 
 
 %changelog
+
+* Mon Mar 11 2019 Franky Backeljauw <franky.backeljauw@uantwerpen.be> - 7.8.22-1.ua
+- update to Lmod 7.8.22
+- changed site name from "HPC-UAntwerpen" to "CalcUA"
 
 * Wed Sep 26 2018 Franky Backeljauw <franky.backeljauw@uantwerpen.be> - 7.8.4-1.ua
 - update to Lmod 7.8.4
