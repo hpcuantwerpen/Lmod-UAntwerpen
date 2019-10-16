@@ -106,7 +106,7 @@ rm -rf %{buildroot}
 * Wed Apr 4 2018 Kenneth Hoste <kenneth.hoste@ugent.be> - 7.7.26-1.ug
 - update to Lmod 7.7.26 (clean error when cache file can not be read & more)
 
-* Thu Mar  7 2018 Franky Backeljauw <franky.backeljauw@uantwerpen.be> - 7.7.15-1.ua
+* Wed Mar  7 2018 Franky Backeljauw <franky.backeljauw@uantwerpen.be> - 7.7.15-1.ua
 - update to Lmod 7.7.15 (initial HPC-UAntwerpen release)
 
 * Fri Sep 29 2017 Kenneth Hoste <kenneth.hoste@ugent.be> - 7.7.5-1.ug
